@@ -1,7 +1,7 @@
 import ButtonComp from './ButtonComp.jsx';
 import CartWidget from './CartWidget.jsx';
 
-export default function NavBar() {
+export default function NavBarComp() {
     return (
         <>
             <div className='flex items-center justify-between m-4 mb-2 bg-indigo-950 rounded'>
@@ -11,13 +11,10 @@ export default function NavBar() {
                 </svg>
                 <ul className='flex items-center justify-around m-4 p-4 gap-8'>
                     <li className='items-center' >
-                        <ButtonComp enlace="#" contenido="HOME" />
+                        <ButtonComp enlace="/" contenido="HOME" />
                     </li>
                     <li >
-                        <ButtonComp enlace="#" contenido="CONTENIDO" />
-                    </li>
-                    <li >
-                        <ButtonComp enlace="#" contenido="CONTACTO" />
+                        <ButtonComp enlace="/products" contenido="PRODUCTOS" />
                     </li>
                     <li>
                         <CartWidget/>
