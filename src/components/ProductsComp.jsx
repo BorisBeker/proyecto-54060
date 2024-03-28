@@ -9,6 +9,10 @@ export default function ProductComp() {
         navigate(`/product/${id}`)
     }
 
+    const handleClick2 = (categoria) => {
+        navigate(`/category/${categoria}`)
+    }
+
     const [products, setProducts] = useState([])
     
     useEffect(() => {
@@ -18,6 +22,10 @@ export default function ProductComp() {
     return(
         <section className="flex flex-col items-center">
             <h1 className="mt-10 font-sans font-extrabold text-4xl">PRODUCTOS</h1>
+
+            <button onClick={()=>{handleClick2("adventure")}}>Aventura</button>
+            <button onClick={()=>{handleClick2("struggle")}}>Peleas</button>
+
             <div className="flex items-center justify-center h-96 px-10 gap-4">
                 
                 {

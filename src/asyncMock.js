@@ -11,7 +11,7 @@ const products = [
         id: "2",
         tittle:"God Of War: Ragnarok",
         description: "Otro god of war...",
-        category: "fantasy",
+        category: "adventure",
         price: 3000,
         image: "https://assets-prd.ignimgs.com/2022/07/25/9781506733494-1658716557072.jpg"
     },
@@ -33,4 +33,8 @@ export const getProducts = new Promise((resolve) => {
 
 export const getProduct = (id)=>{
     return products.find(prod => prod.id == id);
+}
+
+export const filterCategory = (category) => {
+    return products.filter(prod => prod.category == category)
 }
